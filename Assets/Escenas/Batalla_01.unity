@@ -450,6 +450,82 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c84ca5fc229244b08aefdcd5c839bcb1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1894267715 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012191273708, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+    type: 2}
+  m_PrefabInternal: {fileID: 266110684}
+--- !u!114 &1894267716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0f0987b116be4a289237bfd52654537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1894267717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87acbdcd4d6f94b5f9c4e29dc903321a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perseguirObjetivo: {fileID: 0}
+--- !u!114 &1894267718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 504af8bc173404a5ba078b0750bb8082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1894267719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2654304b168a34368a0552d5e0b4f2d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1894267720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1bf34b308537429fa49cff368e18997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1894267721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1894267715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06023bd12370c4e3aaf54108db43db9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EstadoPatrulla: {fileID: 1894267720}
+  EstadoAlerta: {fileID: 1894267719}
+  EstadoPersecucion: {fileID: 1894267718}
+  EstadoInicial: {fileID: 1894267720}
 --- !u!1 &2039719695
 GameObject:
   m_ObjectHideFlags: 0

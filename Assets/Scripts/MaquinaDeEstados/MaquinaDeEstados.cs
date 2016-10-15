@@ -3,13 +3,21 @@ using System.Collections;
 
 public class MaquinaDeEstados : MonoBehaviour {
 
-	// Use this for initialization
+	public MonoBehaviour EstadoPatrulla;
+	public MonoBehaviour EstadoAlerta;
+	public MonoBehaviour EstadoPersecucion;
+	public MonoBehaviour EstadoInicial;
+
+	private MonoBehaviour estadoActual;
+
 	void Start () {
-	
+		ActivarEstado (EstadoInicial);
 	}
 	
-	// Update is called once per frame
-	void Update () {
+	public void ActivarEstado(MonoBehaviour nuevoEstado){
 	
+		if(estadoActual != null) estadoActual.enabled = false;
+		estadoActual = nuevoEstado;
+		estadoActual.enabled = true;
 	}
 }
