@@ -1,26 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EstadoAlerta : MonoBehaviour {
+public class EstadoAlerta : Estado {
 
-	public Color ColorEstado = Color.yellow;
 	public float velocidadGiroBusqueda = 120f;
 	public float duracionBusqueda = 4f;
 
-	private MaquinaDeEstados maquinaDeEstados;
+
 	private ControladorVision controladorVision;
 	private ControladorNavMesh controladorNavMesh;
 	private float tiempoBuscando;
 
-	void Awake () {
-		maquinaDeEstados = GetComponent<MaquinaDeEstados> ();
+	protected override void Awake () {
+		base.Awake ();
 		controladorNavMesh = GetComponent<ControladorNavMesh> ();
 		controladorVision = GetComponent<ControladorVision> ();
 	}
 
 	void OnEnable(){
-	
-		maquinaDeEstados.MeshRendererIndicador.material.color = ColorEstado;
+
 		controladorNavMesh.DetenerNavMeshAgent ();
 		tiempoBuscando = 0f;
 	}

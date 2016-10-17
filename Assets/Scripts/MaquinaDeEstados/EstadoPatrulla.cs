@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EstadoPatrulla : MonoBehaviour {
+public class EstadoPatrulla : Estado {
 
 	public Transform[] WayPoint;
-	public Color ColorEstado = Color.green;
 
-	private MaquinaDeEstados maquinaDeEstados;
+
 	private ControladorVision controladorVision;
 	private ControladorNavMesh controladorNavMesh;
 	private int siguienteWayPoint;
 
-	void Awake () {
-		maquinaDeEstados = GetComponent<MaquinaDeEstados> ();
+	protected override void Awake () {
+		base.Awake ();
 		controladorNavMesh = GetComponent<ControladorNavMesh>();
 		controladorVision = GetComponent<ControladorVision> ();
 	}
@@ -38,7 +37,6 @@ public class EstadoPatrulla : MonoBehaviour {
 	void OnEnable(){
 	
 		ActualizarWayPointDestino ();
-		maquinaDeEstados.MeshRendererIndicador.material.color = ColorEstado;
 
 	}
 

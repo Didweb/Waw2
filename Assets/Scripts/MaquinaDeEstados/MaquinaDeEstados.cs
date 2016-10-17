@@ -3,23 +3,25 @@ using System.Collections;
 
 public class MaquinaDeEstados : MonoBehaviour {
 
-	public MonoBehaviour EstadoPatrulla;
-	public MonoBehaviour EstadoAlerta;
-	public MonoBehaviour EstadoPersecucion;
-	public MonoBehaviour EstadoInicial;
-
+	public Estado EstadoPatrulla;
+	public Estado EstadoAlerta;
+	public Estado EstadoPersecucion;
+	public Estado EstadoInicial;
 	public MeshRenderer MeshRendererIndicador;
 
-	private MonoBehaviour estadoActual;
+	private Estado estadoActual;
 
 	void Start () {
 		ActivarEstado (EstadoInicial);
 	}
-	
-	public void ActivarEstado(MonoBehaviour nuevoEstado){
+
+	public void ActivarEstado(Estado nuevoEstado){
 	
 		if(estadoActual != null) estadoActual.enabled = false;
 		estadoActual = nuevoEstado;
 		estadoActual.enabled = true;
+
+		MeshRendererIndicador.material.color = estadoActual.ColorEstado;
+
 	}
 }

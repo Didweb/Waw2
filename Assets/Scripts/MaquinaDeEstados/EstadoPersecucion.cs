@@ -1,17 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EstadoPersecucion : MonoBehaviour {
+public class EstadoPersecucion : Estado {
 
-	public Color ColorEstado = Color.red;
 
-	private MaquinaDeEstados maquinaDeEstados;
+
 	private ControladorNavMesh controladorNavMesh;
 	private ControladorVision controladorVision;
 
 
-	void Awake () {
-		maquinaDeEstados = GetComponent<MaquinaDeEstados> ();
+	protected override void Awake () {
+		base.Awake ();
 		controladorNavMesh = GetComponent<ControladorNavMesh> ();
 		controladorVision = GetComponent<ControladorVision> ();
 	}
@@ -19,7 +18,6 @@ public class EstadoPersecucion : MonoBehaviour {
 
 
 	void OnEnable () {
-		maquinaDeEstados.MeshRendererIndicador.material.color = ColorEstado;
 	}
 
 	void Update(){
