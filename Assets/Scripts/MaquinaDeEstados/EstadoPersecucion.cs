@@ -3,13 +3,34 @@ using System.Collections;
 
 public class EstadoPersecucion : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public Color ColorEstado = Color.red;
+
+	private MaquinaDeEstados maquinaDeEstados;
+	private ControladorNavMesh controladorNavMesh;
+	private ControladorVision controladorVision;
+
+
+	void Awake () {
+		maquinaDeEstados = GetComponent<MaquinaDeEstados> ();
+		controladorNavMesh = GetComponent<ControladorNavMesh> ();
+		controladorVision = GetComponent<ControladorVision> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+
+
+	void OnEnable () {
+		maquinaDeEstados.MeshRendererIndicador.material.color = ColorEstado;
+	}
+
+	void Update(){
+
+		RaycastHit hit;
+		if (!controladorVision.PuedeVerAlJugador (out hit, true)) {
+			maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAlerta);
+			return;
+		}
+
+
+		controladorNavMesh.ActualizarPuntoDestinoNavMeshAgent ();
 	}
 }

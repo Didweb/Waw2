@@ -10,6 +10,11 @@ public class ControladorVision : MonoBehaviour {
 	private ControladorNavMesh controladorNavMesh;
 
 
+	void Awake(){
+	
+		controladorNavMesh = GetComponent<ControladorNavMesh> ();
+	}
+
 	public bool PuedeVerAlJugador(out RaycastHit hit,bool mirarHaciaElJugador = false){
 
 		Vector3 vectorDireccion;

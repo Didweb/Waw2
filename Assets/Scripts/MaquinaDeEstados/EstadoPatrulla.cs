@@ -4,7 +4,7 @@ using System.Collections;
 public class EstadoPatrulla : MonoBehaviour {
 
 	public Transform[] WayPoint;
-	public Color colorEstado = Color.green;
+	public Color ColorEstado = Color.green;
 
 	private MaquinaDeEstados maquinaDeEstados;
 	private ControladorVision controladorVision;
@@ -38,7 +38,7 @@ public class EstadoPatrulla : MonoBehaviour {
 	void OnEnable(){
 	
 		ActualizarWayPointDestino ();
-		maquinaDeEstados.MeshRendererIndicador.material.color = colorEstado;
+		maquinaDeEstados.MeshRendererIndicador.material.color = ColorEstado;
 
 	}
 
@@ -50,7 +50,7 @@ public class EstadoPatrulla : MonoBehaviour {
 
 
 	public void OnTriggerEnter(Collider other){
-		if (other.gameObject.CompareTag ("Player")) {
+		if (other.gameObject.CompareTag ("Player") && enabled) {
 			maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAlerta);
 
 		}
