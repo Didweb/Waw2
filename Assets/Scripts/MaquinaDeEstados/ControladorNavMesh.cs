@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ContorladorNavMesh : MonoBehaviour {
+public class ControladorNavMesh : MonoBehaviour {
 
 	[HideInInspector]
 	public Transform perseguirObjetivo;
 
 	private NavMeshAgent navMeshAgent;
 
+     
 
 
 	void Awake(){
@@ -15,9 +16,6 @@ public class ContorladorNavMesh : MonoBehaviour {
 		navMeshAgent = GetComponent<NavMeshAgent> ();
 	}
 
-
-
-	
 
 	public void ActualizarPuntoDestinoNavMeshAgent (Vector3 puntoDestino) {
 	
@@ -38,8 +36,10 @@ public class ContorladorNavMesh : MonoBehaviour {
 		navMeshAgent.Stop ();
 	}
 
+
 	public bool HemosLlegado(){
 		return navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending;
+		return true;
 	}
 
 }

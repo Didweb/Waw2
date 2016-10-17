@@ -7,7 +7,7 @@ public class ControladorVision : MonoBehaviour {
 	public float rangoVision = 20f;
 	public Vector3 offset = new Vector3(0f, 0.5f, 0f);
 
-	private ContorladorNavMesh controladorNavMesh;
+	private ControladorNavMesh controladorNavMesh;
 
 
 	public bool PuedeVerAlJugador(out RaycastHit hit,bool mirarHaciaElJugador = false){

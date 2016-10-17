@@ -8,6 +8,8 @@ public class MaquinaDeEstados : MonoBehaviour {
 	public MonoBehaviour EstadoPersecucion;
 	public MonoBehaviour EstadoInicial;
 
+	public MeshRenderer MeshRendererIndicador;
+
 	private MonoBehaviour estadoActual;
 
 	void Start () {
