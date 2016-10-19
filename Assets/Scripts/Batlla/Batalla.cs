@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class Batalla : MonoBehaviour {
 
-	public bool InicioBatalla;
-	// Use this for initialization
-	void Start () {
+	public bool EnBatalla;
+
+	void Awake (){
 	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		EnBatalla = false;
 	}
 }

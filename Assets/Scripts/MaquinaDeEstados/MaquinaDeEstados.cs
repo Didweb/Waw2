@@ -11,22 +11,39 @@ public class MaquinaDeEstados : MonoBehaviour {
 
 
 
+
 	private Estado estadoActual;
+	public Batalla Batalla;
 
 	void Start () {
 		ActivarEstado (EstadoInicial);
 	}
 
 
+	void Update(){
+	
+		if (Batalla.EnBatalla) {
+			
+			//Debug.Log ("Activado");
+			estadoActual.enabled = true;
 
+		} else {
+			//Debug.Log ("No esta iniciada la batalla");
+			if (estadoActual != null) estadoActual.enabled = false;
+
+			
+		}
+	
+	}
 
 	public void ActivarEstado(Estado nuevoEstado){
-	
-		if(estadoActual != null) estadoActual.enabled = false;
-		estadoActual = nuevoEstado;
-		estadoActual.enabled = true;
 
-		MeshRendererIndicador.material.color = estadoActual.ColorEstado;
+			if (estadoActual != null) estadoActual.enabled = false;
+			estadoActual = nuevoEstado;
+			estadoActual.enabled = true;
+
+			MeshRendererIndicador.material.color = estadoActual.ColorEstado;
+
 
 	}
 }
