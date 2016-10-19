@@ -9,11 +9,16 @@ public class MaquinaDeEstados : MonoBehaviour {
 	public Estado EstadoInicial;
 	public MeshRenderer MeshRendererIndicador;
 
+
+
 	private Estado estadoActual;
 
 	void Start () {
 		ActivarEstado (EstadoInicial);
 	}
+
+
+
 
 	public void ActivarEstado(Estado nuevoEstado){
 	
