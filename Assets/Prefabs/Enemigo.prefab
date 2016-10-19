@@ -62,8 +62,9 @@ GameObject:
   - 114: {fileID: 114000013051778388}
   - 114: {fileID: 114000012176527580}
   - 114: {fileID: 114000010592467512}
+  - 114: {fileID: 114000013747559144}
   - 114: {fileID: 114000013173629872}
-  - 135: {fileID: 135000010158977646}
+  - 135: {fileID: 135000012136008186}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Untagged
@@ -171,7 +172,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012191273708}
   m_LocalRotation: {x: -0, y: -0.13443701, z: -0, w: 0.99092215}
-  m_LocalPosition: {x: 0.030590415, y: 5.71, z: 19.84}
+  m_LocalPosition: {x: -11.97, y: 0, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000012595136226}
@@ -480,7 +481,10 @@ MonoBehaviour:
   EstadoAlerta: {fileID: 114000013051778388}
   EstadoPersecucion: {fileID: 114000012176527580}
   EstadoInicial: {fileID: 114000010592467512}
+  EstadoParado: {fileID: 114000013747559144}
   MeshRendererIndicador: {fileID: 23000012425653262}
+  Batalla: {fileID: 0}
+  situacionJuego: 0
 --- !u!114 &114000013265234574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -507,6 +511,18 @@ MonoBehaviour:
   Ojos: {fileID: 4000010606694016}
   rangoVision: 20
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &114000013747559144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012191273708}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a011a436a4de449699cd2127d3ca9727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColorEstado: {r: 0.64028746, g: 0, b: 0.99264705, a: 0}
 --- !u!135 &135000010119851004
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -519,18 +535,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &135000010158977646
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012191273708}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135000010186583012
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -542,6 +546,18 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &135000012136008186
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012191273708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &195000010451524458
 NavMeshAgent:

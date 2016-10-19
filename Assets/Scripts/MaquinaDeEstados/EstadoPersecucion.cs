@@ -17,8 +17,6 @@ public class EstadoPersecucion : Estado {
 
 
 
-	void OnEnable () {
-	}
 
 	void Update(){
 

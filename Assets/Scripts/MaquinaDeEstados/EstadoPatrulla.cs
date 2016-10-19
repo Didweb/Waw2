@@ -27,6 +27,8 @@ public class EstadoPatrulla : Estado {
 			return;
 		}
 
+
+
 		if (controladorNavMesh.HemosLlegado ()) {
 			siguienteWayPoint = (siguienteWayPoint + 1) % WayPoint.Length;
 		ActualizarWayPointDestino ();
@@ -34,8 +36,9 @@ public class EstadoPatrulla : Estado {
 	}
 			
 
+
 	void OnEnable(){
-	
+		
 		ActualizarWayPointDestino ();
 
 	}

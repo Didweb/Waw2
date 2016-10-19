@@ -4,10 +4,9 @@ using System.Collections;
 
 public class Batalla : MonoBehaviour {
 
-	public bool EnBatalla;
+	public static bool EnBatalla = false;
 
-	void Awake (){
-	
-		EnBatalla = false;
-	}
+
+
+
 }

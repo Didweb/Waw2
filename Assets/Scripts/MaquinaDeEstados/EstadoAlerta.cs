@@ -17,6 +17,8 @@ public class EstadoAlerta : Estado {
 		controladorVision = GetComponent<ControladorVision> ();
 	}
 
+
+
 	void OnEnable(){
 
 		controladorNavMesh.DetenerNavMeshAgent ();

@@ -39,7 +39,7 @@ public class ControladorNavMesh : MonoBehaviour {
 
 	public bool HemosLlegado(){
 		return navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending;
-		return true;
+
 	}
 
 }
