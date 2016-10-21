@@ -16,7 +16,6 @@ public class MaquinaDeEstados : MonoBehaviour {
 	private Estado estadoActual;
 	private Estado estadoUltimo;
 	private Estado estadoOrigen;
-	public Batalla Batalla;
 
 	public bool situacionJuego;
 
