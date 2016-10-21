@@ -331,6 +331,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TxtIniciarBatalla: {fileID: 1524505186}
   TxtPausa: {fileID: 857676644}
+  escena: 
 --- !u!224 &245919860
 RectTransform:
   m_ObjectHideFlags: 0

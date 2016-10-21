@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class AccionesBotones : Batalla {
 
@@ -8,11 +9,13 @@ public class AccionesBotones : Batalla {
 	public Text TxtIniciarBatalla;
 	public Text TxtPausa;
 
+	public string escena;
 
 	public void IniciarBatalla(){
 
 		if (Batalla.EnBatalla) {
 			Batalla.EnBatalla = false;
+			SceneManager.LoadScene ("Rendido");
 		} else {
 			Batalla.EnBatalla = true;
 			TxtIniciarBatalla.text = "Rendirse";
@@ -30,4 +33,11 @@ public class AccionesBotones : Batalla {
 			TxtPausa.text = "Pausa";
 		}
 	}
+
+	public void ReiniciarBatalla(){
+	
+		SceneManager.LoadScene (escena);
+	
+	}
+
 }
