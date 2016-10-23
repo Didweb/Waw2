@@ -23,6 +23,7 @@ public class ControladorVision : MonoBehaviour {
 		
 			vectorDireccion = (controladorNavMesh.perseguirObjetivo.position + offset) - Ojos.position;
 			//Debug.DrawRay(Ojos.position, vectorDireccion, Color.red, rangoVision);
+
 		} else {
 
 			vectorDireccion =  offset - Ojos.forward*-1;
@@ -30,9 +31,10 @@ public class ControladorVision : MonoBehaviour {
 		}
 	
 
-
-		return Physics.Raycast (Ojos.position, vectorDireccion, out hit, rangoVision) && hit.collider.CompareTag("Player");
-	}
+		return Physics.Raycast (Ojos.position, vectorDireccion, out hit, rangoVision) && hit.collider.CompareTag ("Player");
+			
+			  
+			}
 
 
 

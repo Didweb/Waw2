@@ -14,7 +14,7 @@ public class EstadoParado : Estado {
 
 	void OnEnable(){
 
-
+		controladorNavMesh.DetenerNavMeshAgent ();
 	
 	}
 
