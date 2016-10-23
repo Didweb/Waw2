@@ -5,9 +5,10 @@ public class ControladorVision : MonoBehaviour {
 
 	public Transform Ojos;
 	public float rangoVision = 20f;
-	public Vector3 offset = new Vector3(0f, 0f, 0f);
+	public Vector3 offset = new Vector3(30f, -1f, 10f);
 
 	private ControladorNavMesh controladorNavMesh;
+
 
 
 	void Awake(){
@@ -22,9 +23,11 @@ public class ControladorVision : MonoBehaviour {
 		
 			vectorDireccion = (controladorNavMesh.perseguirObjetivo.position + offset) - Ojos.position;
 		} else {
-		
-			vectorDireccion = Ojos.forward;
+
+			vectorDireccion =  (Ojos.position+offset) - Ojos.forward*-1;
 		}
+	
+		Debug.DrawLine(Ojos.position, vectorDireccion, Color.red);
 
 		return Physics.Raycast (Ojos.position, vectorDireccion, out hit, rangoVision) && hit.collider.CompareTag("Player");
 	}
