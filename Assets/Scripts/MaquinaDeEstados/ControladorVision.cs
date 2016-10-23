@@ -4,8 +4,8 @@ using System.Collections;
 public class ControladorVision : MonoBehaviour {
 
 	public Transform Ojos;
-	public float rangoVision = 20f;
-	public Vector3 offset = new Vector3(30f, -1f, 10f);
+	public float rangoVision = 20000f;
+	public Vector3 offset = new Vector3(0f, -1f, 0f);
 
 	private ControladorNavMesh controladorNavMesh;
 
@@ -22,12 +22,14 @@ public class ControladorVision : MonoBehaviour {
 		if (mirarHaciaElJugador) {
 		
 			vectorDireccion = (controladorNavMesh.perseguirObjetivo.position + offset) - Ojos.position;
+			//Debug.DrawRay(Ojos.position, vectorDireccion, Color.red, rangoVision);
 		} else {
 
-			vectorDireccion =  (Ojos.position+offset) - Ojos.forward*-1;
+			vectorDireccion =  offset - Ojos.forward*-1;
+			//Debug.DrawRay(Ojos.position, vectorDireccion, Color.green, rangoVision);
 		}
 	
-		Debug.DrawLine(Ojos.position, vectorDireccion, Color.red);
+
 
 		return Physics.Raycast (Ojos.position, vectorDireccion, out hit, rangoVision) && hit.collider.CompareTag("Player");
 	}
