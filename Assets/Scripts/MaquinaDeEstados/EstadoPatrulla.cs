@@ -23,10 +23,10 @@ public class EstadoPatrulla : Estado {
 		if (controladorVision.PuedeVerAlJugador (out hit)) {
 
 			controladorNavMesh.perseguirObjetivo = hit.transform;
-			//Debug.Log("Distancia: "+ hit.distance);
+			Debug.Log("Distancia PA: "+ hit.distance);
 			if (hit.distance < 100) {
-				Debug.Log ("DISPARA");
-				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoParado);
+				controladorNavMesh.DetenerNavMeshAgent ();
+				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
 			} else {
 				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoPersecucion);
 			}

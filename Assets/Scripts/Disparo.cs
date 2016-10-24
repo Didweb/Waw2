@@ -5,18 +5,17 @@ public class Disparo : MonoBehaviour {
 
 
 	public GameObject Bala;
-
-
-	// Use this for initialization
-	void Start () {
+	private MueveBala MueveLaBala;
+	void Awake () {
 		
+		MueveLaBala = GetComponent<MueveBala> ();
 	}
-	
-	// Update is called once per frame
-	public void Update() {
 
-		if(Input.GetKey(KeyCode.D)){
+	// Update is called once per frame
+	public void Disparar() {
+
 		Instantiate(Bala, transform.position, transform.rotation);
-		}
+		//MueveLaBala.mueve ();
+		Debug.Log ("DENTRO DISPARO");
 	}
 }

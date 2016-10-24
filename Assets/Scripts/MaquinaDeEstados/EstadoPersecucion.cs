@@ -22,11 +22,20 @@ public class EstadoPersecucion : Estado {
 
 		RaycastHit hit;
 		if (!controladorVision.PuedeVerAlJugador (out hit, true)) {
+			Debug.Log("Distancia PE: "+ hit.distance);
 			maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAlerta);
 			return;
 		}
 
+		if (controladorVision.PuedeVerAlJugador (out hit, true)) {
+			if (hit.distance < 100) {
 
-		controladorNavMesh.ActualizarPuntoDestinoNavMeshAgent ();
+				controladorNavMesh.DetenerNavMeshAgent ();
+				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
+			} else {
+			
+				controladorNavMesh.ActualizarPuntoDestinoNavMeshAgent ();
+			}
+		}
 	}
 }

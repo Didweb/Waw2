@@ -8,6 +8,7 @@ public class MaquinaDeEstados : MonoBehaviour {
 	public Estado EstadoPersecucion;
 	public Estado EstadoInicial;
 	public Estado EstadoParado;
+	public Estado EstadoAtaque;
 	public MeshRenderer MeshRendererIndicador;
 
 

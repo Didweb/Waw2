@@ -35,6 +35,8 @@ public class EstadoAlerta : Estado {
 			return;
 		}
 
+
+
 		transform.Rotate (0f, velocidadGiroBusqueda * Time.deltaTime, 0f);
 		tiempoBuscando +=  Time.deltaTime;
 
