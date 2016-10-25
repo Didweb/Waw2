@@ -10,19 +10,23 @@ public class EstadoAtaque : Estado {
 
 	private ControladorNavMesh controladorNavMesh;
 	private ControladorVision controladorVision;
-	Disparo Bala;
 
-	private int nDisparos;
+
+	public int nDisparos = 0;
 
 
 	protected override void Awake () {
 		base.Awake ();
 		controladorNavMesh = GetComponent<ControladorNavMesh>();
 		controladorVision = GetComponent<ControladorVision> ();
-		Bala = GameObject.Find("SalidaBalas").GetComponent<Disparo>();
-		nDisparos = 0;
+
+
 	}
 
+	public int dameNDisparos(){
+	
+		return nDisparos;
+	}
 
 	void Update () {
 	
@@ -31,7 +35,7 @@ public class EstadoAtaque : Estado {
 			
 			if (tiempoCargando >= tiempoDeCarga) {
 
-				//Bala.Disparar ();
+
 				nDisparos += 1;
 				Debug.Log ("Disparo!!!!!!" + nDisparos);
 				tiempoCargando = 0f;
