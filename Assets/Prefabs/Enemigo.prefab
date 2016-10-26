@@ -217,9 +217,10 @@ GameObject:
   - 114: {fileID: 114000010704555516}
   - 114: {fileID: 114000013173629872}
   - 65: {fileID: 65000011401997510}
+  - 114: {fileID: 114000013700269372}
   m_Layer: 0
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -249,6 +250,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000014257469498}
+  - 114: {fileID: 114000013150054594}
   m_Layer: 0
   m_Name: SalidaBalas
   m_TagString: Untagged
@@ -659,8 +661,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012191273708}
-  m_LocalRotation: {x: -0, y: 0.6878742, z: -0, w: 0.72583}
-  m_LocalPosition: {x: -3.4, y: -0.47291, z: -13.19}
+  m_LocalRotation: {x: -0, y: 0.0036227645, z: -0, w: 0.99999344}
+  m_LocalPosition: {x: -12.004627, y: 1.015, z: 7.9859624}
   m_LocalScale: {x: 3.3645349, y: 3.3645349, z: 3.3645349}
   m_Children:
   - {fileID: 4000013484679670}
@@ -1804,6 +1806,7 @@ MonoBehaviour:
   ColorEstado: {r: 0, g: 0.7985918, b: 1, a: 0}
   tiempoDeCarga: 4
   tiempoCargando: 0
+  nDisparos: 0
 --- !u!114 &114000012176527580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1830,6 +1833,18 @@ MonoBehaviour:
   ColorEstado: {r: 0.862069, g: 1, b: 0, a: 0}
   velocidadGiroBusqueda: 120
   duracionBusqueda: 4
+--- !u!114 &114000013150054594
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012398540458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5479aae8193664cef9616fcd08bc7903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nDeDisparos: 0
 --- !u!114 &114000013173629872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1875,6 +1890,34 @@ MonoBehaviour:
   Ojos: {fileID: 4000010606694016}
   rangoVision: 20
   offset: {x: 0, y: 0, z: 0}
+--- !u!114 &114000013700269372
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012191273708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59be20e6845bb414f95df39f520c63a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estaVivo: 1
+  experienciaCombate: 0
+  punteria: 0
+  desgaste: 0
+  estres: 0
+  euforia: 0
+  distanciaRecorrida: 0
+  municionGranCalibre: 0
+  tiempoCargaGranCalibre: 0
+  potenciaoGranCalibre: 85
+  municionBajoCalibre: 0
+  tiempoCargaBajoCalibre: 0
+  potenciaBajoCalibre: 40
+  capacidadDepositoCombustible: 0
+  combustibleDisponible: 0
+  autonomiaXLitro: 0
+  velocidad: 0
 --- !u!114 &114000013747559144
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -18,27 +18,38 @@ public class EstadoPatrulla : Estado {
 	
 
 	void Update () {
-		// ve al jugador?
-		RaycastHit hit;
-		if (controladorVision.PuedeVerAlJugador (out hit)) {
 
-			controladorNavMesh.perseguirObjetivo = hit.transform;
-			Debug.Log("Distancia PA: "+ hit.distance);
-			if (hit.distance < 100) {
-				controladorNavMesh.DetenerNavMeshAgent ();
-				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
-			} else {
-				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoPersecucion);
+		if (vida.estaVivo) {
+			
+
+			// ve al jugador?
+			RaycastHit hit;
+			if (controladorVision.PuedeVerAlJugador (out hit)) {
+
+				controladorNavMesh.perseguirObjetivo = hit.transform;
+
+				if (hit.distance < 100) {
+					controladorNavMesh.DetenerNavMeshAgent ();
+					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
+				} else {
+					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoPersecucion);
+				}
+				return;
 			}
-			return;
+
+
+
+			if (controladorNavMesh.HemosLlegado ()) {
+				siguienteWayPoint = (siguienteWayPoint + 1) % WayPoint.Length;
+				ActualizarWayPointDestino ();
+			}
+		} else {
+			controladorNavMesh.DetenerNavMeshAgent ();
+
+			Debug.Log ("Tanque Muerto: "+name);
 		}
 
-
-
-		if (controladorNavMesh.HemosLlegado ()) {
-			siguienteWayPoint = (siguienteWayPoint + 1) % WayPoint.Length;
-		ActualizarWayPointDestino ();
-		}
+		
 	}
 			
 
