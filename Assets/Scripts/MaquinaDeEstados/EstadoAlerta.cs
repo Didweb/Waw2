@@ -27,6 +27,9 @@ public class EstadoAlerta : Estado {
 
 	void Update(){
 
+		if (care.estaVivo) {
+			controlEnergia ();
+
 		RaycastHit hit;
 		if (controladorVision.PuedeVerAlJugador (out hit)) {
 
@@ -46,5 +49,11 @@ public class EstadoAlerta : Estado {
 			return;
 		}
 
+	
+	} else {
+		controladorNavMesh.DetenerNavMeshAgent ();
+
+		Debug.Log ("Tanque Muerto: "+name);
+	}
 	}
 }

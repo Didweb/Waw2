@@ -16,7 +16,7 @@ public class Caracteristicas : Perfil {
 	public float energiaDisponible = 680; /*litros*/
 	public float energiaConsumoPorMetro = 0.22f; /*por metro*/
 
-	public int distanciaMinAtaque = 100;
+	public int distanciaMinAtaque = 5;
 
 	private NavMeshAgent agent;
 
