@@ -14,7 +14,7 @@ public class Disparo : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		EstadoAtaque Dispa = GameObject.FindGameObjectWithTag("Enemigo").GetComponent<EstadoAtaque> ();
+		EstadoEnfrentamiento Dispa = GameObject.FindGameObjectWithTag("Enemigo").GetComponent<EstadoEnfrentamiento> ();
 		nDeDisparos = Dispa.dameNDisparos();
 
 		}

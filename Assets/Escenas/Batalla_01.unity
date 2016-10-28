@@ -366,39 +366,12 @@ RectTransform:
   m_AnchoredPosition: {x: 555, y: 190.061}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &295822694 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000012191273708, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+--- !u!114 &295822696 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010704555516, guid: 896451c1f5eac4ea698b0a4a51777ea1,
     type: 2}
   m_PrefabInternal: {fileID: 1048381070}
---- !u!114 &295822705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 295822694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59be20e6845bb414f95df39f520c63a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  estaVivo: 1
-  experienciaCombate: 0
-  punteria: 0
-  desgaste: 0
-  estres: 0
-  euforia: 0
-  distanciaRecorrida: 0
-  municionGranCalibre: 15
-  tiempoCargaGranCalibre: 120
-  potenciaoGranCalibre: 85
-  municionBajoCalibre: 400
-  tiempoCargaBajoCalibre: 200
-  potenciaBajoCalibre: 40
-  capacidadDepositoCombustible: 680
-  combustibleDisponible: 680
-  consumoXKm: 0.22
-  velocidad: 40
+  m_Script: {fileID: 11500000, guid: f816b271a8fa645f9b71ab8ef9332a3d, type: 3}
 --- !u!1 &359876044
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,45 +689,42 @@ Prefab:
       propertyPath: WayPoint.Array.data[1]
       value: 
       objectReference: {fileID: 482398420}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: municionGranCalibre
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: tiempoCargaGranCalibre
       value: 120
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: municionBajoCalibre
       value: 400
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: tiempoCargaBajoCalibre
       value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: capacidadDepositoCombustible
       value: 400
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: combustibleDisponible
       value: 400
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: autonomiaXLitro
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: velocidad
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 195000010451524458, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+        type: 2}
+      propertyPath: m_AutoBraking
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896451c1f5eac4ea698b0a4a51777ea1, type: 2}
@@ -1203,18 +1173,27 @@ Prefab:
       propertyPath: m_Name
       value: Enemigo_Naranja
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: estaVivo
+    - target: {fileID: 114000012926287588, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+        type: 2}
+      propertyPath: esHumano
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+    - target: {fileID: 114000013173629872, guid: 896451c1f5eac4ea698b0a4a51777ea1,
         type: 2}
-      propertyPath: estaVivo
+      propertyPath: EstadoEnfrentamiento
+      value: 
+      objectReference: {fileID: 295822696}
+    - target: {fileID: 195000010451524458, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+        type: 2}
+      propertyPath: m_Speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 195000010451524458, guid: 896451c1f5eac4ea698b0a4a51777ea1,
+        type: 2}
+      propertyPath: m_AutoBraking
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 114000013700269372, guid: 896451c1f5eac4ea698b0a4a51777ea1, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 896451c1f5eac4ea698b0a4a51777ea1, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1064070917

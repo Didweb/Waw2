@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EstadoAtaque : Estado {
+public class EstadoEnfrentamiento : Estado {
 
 	public float tiempoDeCarga = 4f; // El tiempo que tarda en cargar
 	public float tiempoCargando = 0f; // Duracion del proceso

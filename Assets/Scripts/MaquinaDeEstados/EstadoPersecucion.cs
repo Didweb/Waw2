@@ -20,6 +20,7 @@ public class EstadoPersecucion : Estado {
 
 	void Update(){
 
+
 		RaycastHit hit;
 		if (!controladorVision.PuedeVerAlJugador (out hit, true)) {
 			Debug.Log("Distancia PE: "+ hit.distance);
@@ -31,7 +32,7 @@ public class EstadoPersecucion : Estado {
 			if (hit.distance < 100) {
 
 				controladorNavMesh.DetenerNavMeshAgent ();
-				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
+				maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoEnfrentamiento);
 			} else {
 			
 				controladorNavMesh.ActualizarPuntoDestinoNavMeshAgent ();

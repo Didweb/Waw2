@@ -7,17 +7,25 @@ public class Estado : MonoBehaviour {
 
 	protected MaquinaDeEstados maquinaDeEstados;
 	protected Batalla laBatalla;
-	protected Vida vida;
+	protected Caracteristicas care;
 
 
 
 	protected virtual void Awake(){
 		maquinaDeEstados = GetComponent<MaquinaDeEstados> ();
-		vida = GetComponent<Vida> ();
+		care = GetComponent<Caracteristicas> ();
 		laBatalla = GetComponent<Batalla> ();
 
 	}
 
+
+	protected void controlEnergia(){
+		if (care.energiaDisponible <= 0) {
+			maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoParado);
+			care.necesitaEnergia = true;
+			return;
+		}
+	}
 
 
 

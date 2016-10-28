@@ -19,8 +19,9 @@ public class EstadoPatrulla : Estado {
 
 	void Update () {
 
-		if (vida.estaVivo) {
-			
+		if (care.estaVivo) {
+
+			controlEnergia ();
 
 			// ve al jugador?
 			RaycastHit hit;
@@ -30,7 +31,7 @@ public class EstadoPatrulla : Estado {
 
 				if (hit.distance < 100) {
 					controladorNavMesh.DetenerNavMeshAgent ();
-					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoAtaque);
+					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoEnfrentamiento);
 				} else {
 					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoPersecucion);
 				}

@@ -217,7 +217,7 @@ GameObject:
   - 114: {fileID: 114000010704555516}
   - 114: {fileID: 114000013173629872}
   - 65: {fileID: 65000011401997510}
-  - 114: {fileID: 114000013700269372}
+  - 114: {fileID: 114000012926287588}
   m_Layer: 0
   m_Name: Enemigo
   m_TagString: Enemigo
@@ -661,8 +661,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012191273708}
-  m_LocalRotation: {x: -0, y: 0.0036227645, z: -0, w: 0.99999344}
-  m_LocalPosition: {x: -12.004627, y: 1.015, z: 7.9859624}
+  m_LocalRotation: {x: -0, y: 0.6878742, z: -0, w: 0.72583}
+  m_LocalPosition: {x: -3.4, y: -0.47291, z: -13.19}
   m_LocalScale: {x: 3.3645349, y: 3.3645349, z: 3.3645349}
   m_Children:
   - {fileID: 4000013484679670}
@@ -1803,7 +1803,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f816b271a8fa645f9b71ab8ef9332a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorEstado: {r: 0, g: 0.7985918, b: 1, a: 0}
+  ColorEstado: {r: 1, g: 0.459, b: 0, a: 0}
   tiempoDeCarga: 4
   tiempoCargando: 0
   nDisparos: 0
@@ -1819,6 +1819,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ColorEstado: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &114000012926287588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012191273708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59be20e6845bb414f95df39f520c63a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estaVivo: 1
+  experienciaCombate: 0
+  punteria: 0
+  desgaste: 0
+  estres: 0
+  euforia: 0
+  distanciaRecorrida: 0
+  municionGranCalibre: 15
+  tiempoCargaGranCalibre: 120
+  potenciaoGranCalibre: 85
+  municionBajoCalibre: 400
+  tiempoCargaBajoCalibre: 200
+  potenciaBajoCalibre: 40
+  capacidadDepositoCombustible: 1
+  combustibleDisponible: 680
+  consumoXKm: 0.22
+  velocidad: 40
 --- !u!114 &114000013051778388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1890,34 +1918,6 @@ MonoBehaviour:
   Ojos: {fileID: 4000010606694016}
   rangoVision: 20
   offset: {x: 0, y: 0, z: 0}
---- !u!114 &114000013700269372
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012191273708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59be20e6845bb414f95df39f520c63a4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  estaVivo: 1
-  experienciaCombate: 0
-  punteria: 0
-  desgaste: 0
-  estres: 0
-  euforia: 0
-  distanciaRecorrida: 0
-  municionGranCalibre: 0
-  tiempoCargaGranCalibre: 0
-  potenciaoGranCalibre: 85
-  municionBajoCalibre: 0
-  tiempoCargaBajoCalibre: 0
-  potenciaBajoCalibre: 40
-  capacidadDepositoCombustible: 0
-  combustibleDisponible: 0
-  autonomiaXLitro: 0
-  velocidad: 0
 --- !u!114 &114000013747559144
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -10,6 +10,7 @@ public class Perfil : Vida {
 	public int estres;
 	public int euforia;
 	public int distanciaRecorrida;
+	public bool necesitaEnergia = false;
 
 	private float dist;
 
@@ -19,10 +20,20 @@ public class Perfil : Vida {
 
 
 
+	public bool esHumano = false;
+	protected int KmoM;
 
 	void Start(){
 
 		vectorInicial =  transform.TransformPoint(Vector3.zero);
+		if (esHumano) {
+			KmoM = 100;
+		} else {
+			KmoM = 10;
+		}
+
+
+
 	}
 
 
