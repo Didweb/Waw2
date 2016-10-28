@@ -1837,16 +1837,15 @@ MonoBehaviour:
   estres: 0
   euforia: 0
   distanciaRecorrida: 0
-  municionGranCalibre: 15
-  tiempoCargaGranCalibre: 120
-  potenciaoGranCalibre: 85
-  municionBajoCalibre: 400
-  tiempoCargaBajoCalibre: 200
-  potenciaBajoCalibre: 40
-  capacidadDepositoCombustible: 1
-  combustibleDisponible: 680
-  consumoXKm: 0.22
-  velocidad: 40
+  necesitaEnergia: 0
+  esHumano: 0
+  municion: 15
+  tiempoCarga: 120
+  potenciaMuncion: 85
+  energiaCapacidad: 680
+  energiaDisponible: 680
+  energiaConsumoPorMetro: 0.22
+  distanciaMinAtaque: 100
 --- !u!114 &114000013051778388
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1889,7 +1888,7 @@ MonoBehaviour:
   EstadoPersecucion: {fileID: 114000012176527580}
   EstadoInicial: {fileID: 114000010592467512}
   EstadoParado: {fileID: 114000013747559144}
-  EstadoAtaque: {fileID: 114000010704555516}
+  EstadoEnfrentamiento: {fileID: 114000010704555516}
   MeshRendererIndicador: {fileID: 23000012425653262}
   situacionJuego: 0
 --- !u!114 &114000013265234574
@@ -1950,7 +1949,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1000012191273708}
   m_Enabled: 1
   m_Radius: 0.27
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120

@@ -4,8 +4,8 @@ using System.Collections;
 public class ControladorVision : MonoBehaviour {
 
 	public Transform Ojos;
-	public float rangoVision = 2000f;
-	public Vector3 offset = new Vector3(0f, 0f, 0f);
+	public float rangoVision = 100.0f;
+	public Vector3 offset = new Vector3(0f, 1f, 0f);
 
 	private ControladorNavMesh controladorNavMesh;
 
@@ -32,7 +32,7 @@ public class ControladorVision : MonoBehaviour {
 		}
 	
 
-		return Physics.Raycast (Ojos.position, vectorDireccion, out hit, rangoVision) && hit.collider.CompareTag ("Player");
+		return Physics.Raycast (Ojos.position, vectorDireccion, out hit) && hit.collider.CompareTag ("Player");
 			
 			  
 			}

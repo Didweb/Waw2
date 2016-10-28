@@ -6,9 +6,9 @@ public class Caracteristicas : Perfil {
 
 
 
-	public int municionGranCalibre = 15;
-	public float tiempoCargaGranCalibre = 120f;
-	public int potenciaoGranCalibre = 85; /*0-100*/
+	public int municion = 15;
+	public float tiempoCarga = 120f;
+	public int potenciaMuncion = 85; /*0-100*/
 
 
 
@@ -16,7 +16,7 @@ public class Caracteristicas : Perfil {
 	public float energiaDisponible = 680; /*litros*/
 	public float energiaConsumoPorMetro = 0.22f; /*por metro*/
 
-
+	public int distanciaMinAtaque = 100;
 
 	private NavMeshAgent agent;
 

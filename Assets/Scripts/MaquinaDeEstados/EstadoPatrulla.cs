@@ -29,7 +29,7 @@ public class EstadoPatrulla : Estado {
 
 				controladorNavMesh.perseguirObjetivo = hit.transform;
 
-				if (hit.distance < 100) {
+				if (hit.distance < care.distanciaMinAtaque) {
 					controladorNavMesh.DetenerNavMeshAgent ();
 					maquinaDeEstados.ActivarEstado (maquinaDeEstados.EstadoEnfrentamiento);
 				} else {

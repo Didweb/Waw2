@@ -8,7 +8,7 @@ public class EstadoEnfrentamiento : Estado {
 
 
 
-	private ControladorNavMesh controladorNavMesh;
+
 	private ControladorVision controladorVision;
 
 
@@ -17,7 +17,7 @@ public class EstadoEnfrentamiento : Estado {
 
 	protected override void Awake () {
 		base.Awake ();
-		controladorNavMesh = GetComponent<ControladorNavMesh>();
+
 		controladorVision = GetComponent<ControladorVision> ();
 
 
@@ -37,6 +37,7 @@ public class EstadoEnfrentamiento : Estado {
 
 
 				nDisparos += 1;
+				care.municion -= 1;
 				Debug.Log ("Disparo!!!!!!" + nDisparos);
 				tiempoCargando = 0f;
 
