@@ -3,79 +3,70 @@ using System.Collections;
 
 public class MoveCamera : MonoBehaviour 
 {
-	//
-	// VARIABLES
-	//
+	public GameObject suelo;
 
-	public float turnSpeed = 4.0f;		// Speed of camera turning when mouse moves in along an axis
-	public float panSpeed = 4.0f;		// Speed of the camera when being panned
-	public float zoomSpeed = 4.0f;		// Speed of the camera going back and forth
-
-	private Vector3 mouseOrigin;	// Position of cursor when mouse dragging starts
-	private bool isPanning;		// Is the camera being panned?
-	private bool isRotating;	// Is the camera being rotated?
-	private bool isZooming;		// Is the camera zooming?
-
-	//
-	// UPDATE
-	//
 
 	void Update () 
 	{
-		// Get the left mouse button
-		if(Input.GetMouseButtonDown(0))
+		
+		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			// Get mouse origin
-			mouseOrigin = Input.mousePosition;
-			isRotating = true;
+			if (transform.position.x > suelo.transform.position.x) {
+				SetTransformZ (10);
+			}
 		}
 
-		// Get the right mouse button
-		if(Input.GetMouseButtonDown(1))
+		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			// Get mouse origin
-			mouseOrigin = Input.mousePosition;
-			isPanning = true;
+			SetTransformZ(-10);
 		}
 
-		// Get the middle mouse button
-		if(Input.GetMouseButtonDown(2))
+		if(Input.GetKey(KeyCode.RightArrow))
 		{
-			// Get mouse origin
-			mouseOrigin = Input.mousePosition;
-			isZooming = true;
+			SetTransformX(10);
 		}
 
-		// Disable movements on button release
-		if (!Input.GetMouseButton(0)) isRotating=false;
-		if (!Input.GetMouseButton(1)) isPanning=false;
-		if (!Input.GetMouseButton(2)) isZooming=false;
-
-		// Rotate camera along X and Y axis
-		if (isRotating)
+		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-
-			transform.RotateAround(transform.position, transform.right, -pos.y * turnSpeed);
-			transform.RotateAround(transform.position, Vector3.up, pos.x * turnSpeed);
+			SetTransformX(-10);
 		}
 
-		// Move the camera on it's XY plane
-		if (isPanning)
+		if(Input.GetKey(KeyCode.KeypadPlus) )
 		{
-			Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-
-			Vector3 move = new Vector3(pos.x * panSpeed, pos.y * panSpeed, 0);
-			transform.Translate(move, Space.Self);
+			
+			if (Camera.main.orthographicSize < 90) {
+				Camera.main.orthographicSize += 1;
+			}
 		}
 
-		// Move the camera linearly along Z axis
-		if (isZooming)
+		if(Input.GetKey(KeyCode.KeypadMinus) )
 		{
-			Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOrigin);
-
-			Vector3 move = pos.y * zoomSpeed * transform.forward; 
-			transform.Translate(move, Space.World);
+			
+			if (Camera.main.orthographicSize > 10) {
+				Camera.main.orthographicSize -= 1;
+			}
 		}
+
+	
+
 	}
+
+
+	void SetTransformX(float n){
+
+			transform.position = new Vector3 (transform.position.x + n, transform.position.y, transform.position.z);
+		
+	}
+
+	void SetTransformY(float n){
+		transform.position = new Vector3(transform.position.x, transform.position.y+n, transform.position.z);
+	}
+
+	void SetTransformZ(float n){
+		transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z+n);
+	}
+
+
+
+		
 }
