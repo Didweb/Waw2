@@ -4,31 +4,61 @@ using System.Collections;
 public class MoveCamera : MonoBehaviour 
 {
 	public GameObject suelo;
-
+	public float liniteMaxZ;
+	public float liniteMinZ;
+	public float liniteMaxX;
+	public float liniteMinX;
+	public Vector3 posicionOriginal;
+	public Vector3 rotacionOriginal;
 
 	void Update () 
 	{
-		
+
+		if(Input.GetKey(KeyCode.C))
+		{
+			transform.position = posicionOriginal;
+			transform.rotation = Quaternion.Euler(rotacionOriginal) ;
+		}
+
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
-			if (transform.position.x > suelo.transform.position.x) {
+			if (transform.position.z < liniteMaxZ) {
 				SetTransformZ (10);
 			}
+			
 		}
 
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
-			SetTransformZ(-10);
+			if (transform.position.z > liniteMinZ) {
+				SetTransformZ (-10);
+			}
 		}
 
 		if(Input.GetKey(KeyCode.RightArrow))
 		{
-			SetTransformX(10);
+			if (transform.position.x < liniteMaxX) {
+				SetTransformX (10);
+			}
 		}
 
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
-			SetTransformX(-10);
+			if (transform.position.x > liniteMinX) {
+				SetTransformX (-10);
+			}
+		}
+
+		// ROTACION
+		if(Input.GetKey(KeyCode.Y) )
+		{
+			
+			transform.Rotate (new Vector3 (0, -1 ,0) , Space.World);
+		}
+
+		if(Input.GetKey(KeyCode.X))
+		{
+			transform.Rotate (new Vector3 (0,1 ,0 ), Space.World);
 		}
 
 		if(Input.GetKey(KeyCode.KeypadPlus) )
