@@ -23,7 +23,7 @@ public class MoveCamera : MonoBehaviour
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
 			if (transform.position.z < liniteMaxZ) {
-				SetTransformZ (10);
+				SetTransformZ (1);
 			}
 			
 		}
@@ -31,21 +31,21 @@ public class MoveCamera : MonoBehaviour
 		if(Input.GetKey(KeyCode.DownArrow))
 		{
 			if (transform.position.z > liniteMinZ) {
-				SetTransformZ (-10);
+				SetTransformZ (-1);
 			}
 		}
 
 		if(Input.GetKey(KeyCode.RightArrow))
 		{
 			if (transform.position.x < liniteMaxX) {
-				SetTransformX (10);
+				SetTransformX (1);
 			}
 		}
 
 		if(Input.GetKey(KeyCode.LeftArrow))
 		{
 			if (transform.position.x > liniteMinX) {
-				SetTransformX (-10);
+				SetTransformX (-1);
 			}
 		}
 
