@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Muevelo : MonoBehaviour {
 
+	public Camera camaraEs;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +18,7 @@ public class Muevelo : MonoBehaviour {
 			Debug.Log("Mouse is down");
 
 			RaycastHit hitInfo = new RaycastHit();
-			bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo);
+			bool hit = Physics.Raycast(camaraEs.ScreenPointToRay(Input.mousePosition), out hitInfo);
 
 			if (hitInfo.transform.gameObject.tag == "Player") {
 				Debug.Log("PERMITIDO");
