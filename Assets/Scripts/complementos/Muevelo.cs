@@ -80,7 +80,7 @@ public class Muevelo : MonoBehaviour {
 			bool hit = Physics.Raycast(camaraEs.ScreenPointToRay(Input.mousePosition), out hitInfo);
 			pos = new Vector3 (hitInfo.point.x,hitInfo.point.y+0.65f,hitInfo.point.z);
 			Debug.Log ("Puntero creado Moviendo en: "+pos);
-			puntero.transform.Translate (0f,0.65f,0f);
+			puntero.transform.position = pos; // (hitInfo.point.x,hitInfo.point.y+0.65f,hitInfo.point.z);
 
 		}
 	
