@@ -14,12 +14,12 @@ public class EstadoDestino : Estado {
 	}
 
 	void Start () {
-	
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+		
 
 		if (care.estaVivo) {
 		

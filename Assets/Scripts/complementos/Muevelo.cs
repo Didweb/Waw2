@@ -36,17 +36,15 @@ public class Muevelo : MonoBehaviour {
 
 			if (!seleccionado) {
 				seleccionaJugador ();
-			
 			} 
 
 		}
 
+
 		if (Input.GetMouseButtonDown (1)) {
 			Destroy (puntero);
 
-
 			seleccionadestion();
-			Debug.Log ("CLICK DERECHO");
 		}
 
 		if (seleccionado) 
@@ -54,6 +52,10 @@ public class Muevelo : MonoBehaviour {
 			moverPuntero ();
 		}
 
+
+		Debug.Log ("Seleccioando: "+seleccionado);
+		Debug.Log ("DestinoCreado: "+destinoCreado);
+		Debug.Log ("punteroCreado: "+punteroCreado);
 
 	}
 
@@ -70,10 +72,8 @@ public class Muevelo : MonoBehaviour {
 					Destroy (destino);
 				}
 					seleccionado = true;
-
 					nameJugador = hitInfo.transform.gameObject.name;
 					posicionSelecionado = hitInfo.point;
-
 					crearPuntero(hitInfo);
 
 			} 
@@ -94,7 +94,7 @@ public class Muevelo : MonoBehaviour {
 
 			elPlayer = GameObject.Find (hitInfo.transform.gameObject.name);
 
-			elPlayer.GetComponent<EstadoDestino> ().WayPoint.transform.position = pos;
+			//elPlayer.GetComponent<EstadoDestino> ().WayPoint.transform.position = pos;
 			//Estado Maquina = GetComponent<MaquinaDeEstados>();
 			//Maquina.ActivarEstado (elEstado.EstadoDestino);
 
