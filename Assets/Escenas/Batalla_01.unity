@@ -430,6 +430,12 @@ RectTransform:
   m_AnchoredPosition: {x: 555, y: 190.061}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &264094732 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010946086488, guid: c84ca5fc229244b08aefdcd5c839bcb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1576450641}
+  m_Script: {fileID: 11500000, guid: a011a436a4de449699cd2127d3ca9727, type: 3}
 --- !u!1 &359876044
 GameObject:
   m_ObjectHideFlags: 0
@@ -899,6 +905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camaraEs: {fileID: 580716704}
   punto: {fileID: 1000010154944710, guid: e4a9038defac740e6bb5d9e344d770a8, type: 2}
+  destina: {fileID: 1000013296284312, guid: 52994464fa6064abea66381fa64446f1, type: 2}
 --- !u!1 &642237035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,6 +1697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camaraEs: {fileID: 1480231031}
   punto: {fileID: 0}
+  destina: {fileID: 0}
 --- !u!1 &1524505184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,11 +1781,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012412316212, guid: c84ca5fc229244b08aefdcd5c839bcb1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -63.8
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 4000012412316212, guid: c84ca5fc229244b08aefdcd5c839bcb1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.3
+      value: 10.9
       objectReference: {fileID: 0}
     - target: {fileID: 4000012412316212, guid: c84ca5fc229244b08aefdcd5c839bcb1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1807,6 +1815,11 @@ Prefab:
       propertyPath: m_Name
       value: Tanqueta
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011517453724, guid: c84ca5fc229244b08aefdcd5c839bcb1,
+        type: 2}
+      propertyPath: EstadoInicial
+      value: 
+      objectReference: {fileID: 264094732}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c84ca5fc229244b08aefdcd5c839bcb1, type: 2}
   m_IsPrefabParent: 0
@@ -2203,3 +2216,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camaraEs: {fileID: 2051368722}
   punto: {fileID: 0}
+  destina: {fileID: 0}

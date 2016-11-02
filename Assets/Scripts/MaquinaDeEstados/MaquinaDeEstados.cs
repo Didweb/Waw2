@@ -9,6 +9,8 @@ public class MaquinaDeEstados : MonoBehaviour {
 	public Estado EstadoInicial;
 	public Estado EstadoParado;
 	public Estado EstadoEnfrentamiento;
+	public Estado EstadoDestino;
+
 	public MeshRenderer MeshRendererIndicador;
 
 
