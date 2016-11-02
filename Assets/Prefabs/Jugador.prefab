@@ -132,6 +132,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012042270960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013976351788}
+  - 33: {fileID: 33000012287585856}
+  - 65: {fileID: 65000013682601556}
+  - 23: {fileID: 23000010338125226}
+  m_Layer: 0
+  m_Name: Estado
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012307940182
 GameObject:
   m_ObjectHideFlags: 1
@@ -282,6 +300,8 @@ GameObject:
   - 114: {fileID: 114000011744268132}
   - 114: {fileID: 114000010946086488}
   - 114: {fileID: 114000011517453724}
+  - 114: {fileID: 114000012421648664}
+  - 114: {fileID: 114000013756149610}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Player
@@ -429,7 +449,7 @@ Transform:
   - {fileID: 4000010679118150}
   - {fileID: 4000010755744746}
   m_Father: {fileID: 4000012412316212}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -87.9, y: 0, z: 0}
 --- !u!4 &4000012344706502
 Transform:
@@ -454,6 +474,7 @@ Transform:
   m_LocalPosition: {x: -67, y: 10.9, z: -70.4}
   m_LocalScale: {x: 3.7295678, y: 3.7295692, z: 3.7295692}
   m_Children:
+  - {fileID: 4000013976351788}
   - {fileID: 4000012212738438}
   - {fileID: 4000012896570696}
   - {fileID: 4000013357387728}
@@ -497,7 +518,7 @@ Transform:
   m_LocalScale: {x: 0.21147805, y: 0.89803654, z: 0.19872195}
   m_Children: []
   m_Father: {fileID: 4000012412316212}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000013357387728
 Transform:
@@ -510,8 +531,21 @@ Transform:
   m_LocalScale: {x: 0.14229003, y: 0.19314003, z: 0.16790701}
   m_Children: []
   m_Father: {fileID: 4000012412316212}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -91.023}
+--- !u!4 &4000013976351788
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012042270960}
+  m_LocalRotation: {x: 0.0087143, y: 0.9997979, z: 0.00003889436, w: 0.018120617}
+  m_LocalPosition: {x: 0.18, y: 0.81, z: -0.13}
+  m_LocalScale: {x: 0.09021262, y: 0.06991462, z: 0.3382969}
+  m_Children: []
+  m_Father: {fileID: 4000012412316212}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 88.837006, z: 0}
 --- !u!23 &23000010249147512
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -531,6 +565,33 @@ MeshRenderer:
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!23 &23000010338125226
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012042270960}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
@@ -925,6 +986,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011961104590}
   m_Mesh: {fileID: 4300004, guid: 29dae88fbb38ef1428b51579194016fb, type: 3}
+--- !u!33 &33000012287585856
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012042270960}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33000012509169936
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -1039,6 +1107,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65000013682601556
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012042270960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95000010231168736
 Animator:
   serializedVersion: 3
@@ -1082,10 +1162,11 @@ MonoBehaviour:
   EstadoPatrulla: {fileID: 0}
   EstadoAlerta: {fileID: 0}
   EstadoPersecucion: {fileID: 0}
-  EstadoInicial: {fileID: 0}
-  EstadoParado: {fileID: 0}
+  EstadoInicial: {fileID: 114000011744268132}
+  EstadoParado: {fileID: 114000010946086488}
   EstadoEnfrentamiento: {fileID: 0}
-  MeshRendererIndicador: {fileID: 0}
+  EstadoDestino: {fileID: 114000011744268132}
+  MeshRendererIndicador: {fileID: 23000010338125226}
   situacionJuego: 0
 --- !u!114 &114000011744268132
 MonoBehaviour:
@@ -1093,12 +1174,52 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000014182775666}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c5186bef1ee64a7a9f3b084be2a687f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ColorEstado: {r: 0, g: 0, b: 0, a: 0}
+  ColorEstado: {r: 0.08044985, g: 0.9117647, b: 0.22378002, a: 0}
+  WayPoint: {fileID: 0}
+--- !u!114 &114000012421648664
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014182775666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59be20e6845bb414f95df39f520c63a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  estaVivo: 1
+  experienciaCombate: 0
+  punteria: 0
+  desgaste: 0
+  estres: 0
+  euforia: 0
+  distanciaRecorrida: 0
+  necesitaEnergia: 0
+  esHumano: 0
+  municion: 15
+  tiempoCarga: 120
+  potenciaMuncion: 85
+  energiaCapacidad: 680
+  energiaDisponible: 680
+  energiaConsumoPorMetro: 0.22
+  distanciaMinAtaque: 5
+--- !u!114 &114000013756149610
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014182775666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01339b14a37844311b241f04e0c241cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  perseguirObjetivo: {fileID: 0}
 --- !u!135 &135000013824981452
 SphereCollider:
   m_ObjectHideFlags: 1

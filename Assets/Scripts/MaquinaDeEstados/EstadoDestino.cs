@@ -34,4 +34,19 @@ public class EstadoDestino : Estado {
 
 
 	}
+
+
+
+
+	void OnEnable(){
+
+		ActualizarWayPointDestino ();
+
+	}
+
+	void ActualizarWayPointDestino(){
+
+		controladorNavMesh.ActualizarPuntoDestinoNavMeshAgent (WayPoint.position);
+	}
+
 }
